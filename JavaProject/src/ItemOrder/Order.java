@@ -21,10 +21,7 @@ public class Order {
 	public void printReceipt(Order order) {
 		System.out.println("Order No: "+order.orderNo+"\n, Items Bought:\n Item No: "+order.itemsBought+", Customer Information:\n "+order.customer.firstName+"");
 		
-		/*for (int i = 0; i < order.itemsBought.size(); i++) {
-            int value = elements.get(i);
-            System.out.println("Element: " + value);*/
-		
+			
 	}
 	 public void sendEmail() {
 		 
