@@ -1,8 +1,10 @@
 
-public class Owner extends Car {
+public class Owner {
 	String ownerName;
-	   Owner(String name, String carName, int year){
-		super(carName, year);
-		this.ownerName=name;
-}
+
+	public void checkOnetoOneAssociation() {
+		Car car = new Car("DodegeAvenger", 2010);
+		car.printDetails("Sushma");
+	}
+
 }
