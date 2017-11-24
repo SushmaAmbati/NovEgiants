@@ -1,27 +1,32 @@
 
 public class Cylinder extends Circle {
-	double height, cylinderArea;
+	int height;
+	double cylinderArea, rectangleArea;
+	Rectangle rectangle;
 
-	public Cylinder() {
+	public Cylinder(int height) {
+		this.height = height;
 	};
 
-	public Cylinder(double height) {
-		this.height = height;
-	}
-
-	public double Area(double circleArea, double circleCircumference) {
-		cylinderArea = (2 * circleArea) + (height * circleCircumference);
-
+	public double area(double circleArea, double circleCircumference) {
+		cylinderArea = (2 * circleArea) + rectangleArea;
 		return cylinderArea;
-
 	}
 
 	public double CircumferenceOfCircle(int rad) {
-
-		Cylinder cylinder = new Cylinder();
-		cylinder.circleCircumference = 2 * Math.PI * rad;
-		return cylinder.circleCircumference;
-
+		return 2 * Math.PI * rad;
 	}
 
+	public void calculateProperties() {
+		rectangle = new Rectangle(height);
+		circleArea = area(2);
+		circleCircumference = CircumferenceOfCircle(2);
+		rectangleArea = rectangle.area(circleCircumference);
+		cylinderArea = area(circleArea, rectangleArea);
+	}
+
+	public void printProperties() {
+		System.out.println("Area of circle: " + circleArea + " \nCircumference of circle: " + circleCircumference
+				+ " \nArea of cylinder: " + cylinderArea + "");
+	}
 }

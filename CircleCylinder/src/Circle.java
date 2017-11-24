@@ -1,13 +1,11 @@
 
 public abstract class Circle {
 	double radius;
-	double areaOfCircle, circleCircumference;
+	double circleArea, circleCircumference;
 
-	public double Area(int rad) {
+	public double area(int rad) {
 
-		areaOfCircle = Math.PI * rad * rad;
-
-		return areaOfCircle;
+		return Math.PI * rad * rad;
 
 	}
 
