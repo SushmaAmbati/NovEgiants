@@ -1,5 +1,5 @@
 
-public class Rectangle {
+public class Rectangle extends Shapes {
 	double height;
 	double area;
 
@@ -7,8 +7,15 @@ public class Rectangle {
 		this.height = height;
 	}
 
-	public double area(double length) {
-		area = height * length;
+	@Override
+	public double area() {
+		Circle circle = new Circle(2);
+		area = height * circle.circumferenceOfCircle();
 		return area;
 	}
+
+	public void printProperties() {
+		System.out.println("Area of Rectangle is " + area);
+	}
+
 }
