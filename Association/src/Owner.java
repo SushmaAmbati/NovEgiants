@@ -1,10 +1,18 @@
 
 public class Owner {
-	String ownerName;
+	private String ownerName;
 
-	public void checkOnetoOneAssociation() {
-		Car car = new Car("DodegeAvenger", 2010);
-		car.printDetails("Sushma");
+	public Owner(String ownerName) {
+		super();
+		this.ownerName = ownerName;
+	}
+
+	public String getOwnerName() {
+		return ownerName;
+	}
+
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
 	}
 
 }
